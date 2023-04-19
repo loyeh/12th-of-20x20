@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.mi.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisan==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="head_part">
+    <label for="difficulty">Difficulty</label>
+    <select name="difficulty" id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+  </div>
+  <div class="main">
+    <div class="lost" id="lost">
+      <h3>Time ran out</h3>
+      <p>your final score is <span id="score">15</span></p>
+      <button onclick="reloade()">Reload</button>
+    </div>
+    <div class="toggle_header">
+      <button onclick="toggle_header()">
+        <i class="fa-solid fa-gear"></i>
+      </button>
+    </div>
+  </div>
+  <!-- Project -->
+  <script src="script.js"></script>
+</body>
+</html>

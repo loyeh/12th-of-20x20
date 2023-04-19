@@ -1,0 +1,73 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+body {
+    font-size: 15pt;
+    background-color: #555566;
+    height:100vh;
+    position: relative;
+}
+.head_part{
+  position: absolute;
+  top: 0;
+  height: 10vh;
+  background-color: #222233;
+  text-align: center;
+  line-height:7vh;
+  /*vertical-align: top;*/
+  transition: 1s;
+  width: 100vw;
+}
+.head_part.hide{
+  top: -10vh;
+}
+label{
+  font-size: 13px;
+  color: white;
+}
+select{
+  width: 200px;
+}
+.main,.lost{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 100vh
+}
+.lost{
+  width: 250px;
+  height: 150px;
+  background-color: #aaaabb;
+  border-radius:10px;
+  box-shadow: 5px 5px 20px #222233;
+}
+.lost p{
+  font-size: 12px;
+  margin-block: 10px;
+}
+.lost button{
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.toggle_header button{
+  width: 60px;
+  height: 25px;
+  text-align: center;
+  padding: auto;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.toggle_header{
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  border: 1px solid red;
+  
+}
