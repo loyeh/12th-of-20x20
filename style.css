@@ -1,62 +1,108 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0
 }
+
 body {
-    font-size: 15pt;
-    background-color: #555566;
-    height:100vh;
-    position: relative;
+  font-size: 15pt;
+  background-color: #4c4d5f;
+  height: 100vh;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.head_part{
-  position: absolute;
+
+.head_part {
+  position: relative;
   top: 0;
   height: 10vh;
-  background-color: #222233;
+  background-color: #32323f;
   text-align: center;
-  line-height:7vh;
+  line-height: 10vh;
   /*vertical-align: top;*/
   transition: 1s;
   width: 100vw;
 }
-.head_part.hide{
+
+.head_part.hide {
   top: -10vh;
 }
-label{
+
+label {
   font-size: 13px;
   color: white;
 }
-select{
+
+select {
   width: 200px;
 }
-.main,.lost{
+
+.main,
+.info_screen,
+.lost,.play_ground {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: relative;
-  height: 100vh
+  height: 90vh
 }
-.lost{
-  width: 250px;
-  height: 150px;
-  background-color: #aaaabb;
-  border-radius:10px;
+.lost.hide{
+  display: none;
+}
+.info_screen {
+  width: 360px;
+  background-color: #5f667c;
+  border-radius: 2px;
   box-shadow: 5px 5px 20px #222233;
+  height: 180px;
+  color: white;
+
 }
-.lost p{
+.play_ground h3{
+background-color: #4c4d5f;
+padding: 5px 50px;
+
+}
+.play_ground.hide{
+  display: none;
+}
+.time_score {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-block: 5px;
+}
+.lost p {
   font-size: 12px;
-  margin-block: 10px;
+  margin-block: 20px;
 }
-.lost button{
+.word{
+font-size: 32px;
+font-weight: bold;text-align: center;
+margin: 5px;
+}
+.player{
+  text-align: center;
+}
+.player input{
+
+  padding: 5px 10px;
+}
+p{
+  text-align: center;
+  font-size: 14px;
+
+}
+.lost button {
   font-size: 13px;
   font-weight: bold;
   cursor: pointer;
   padding: 5px 10px;
   border-radius: 5px;
 }
-.toggle_header button{
+
+.toggle_header button {
   width: 60px;
   height: 25px;
   text-align: center;
@@ -64,10 +110,19 @@ select{
   cursor: pointer;
   border-radius: 2px;
 }
-.toggle_header{
+
+.toggle_header {
   position: absolute;
   bottom: 40px;
   left: 40px;
   border: 1px solid red;
-  
+
+}
+
+button,
+button:active,
+button:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
 }

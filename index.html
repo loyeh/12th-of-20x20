@@ -1,40 +1,65 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>HTML</title>
-  
-  <!-- font awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.mi.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisan==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
-</head>
+    <title>HTML</title>
 
-<body>
-  <div class="head_part">
-    <label for="difficulty">Difficulty</label>
-    <select name="difficulty" id="difficulty">
-      <option value="easy">Easy</option>
-      <option value="medium">Medium</option>
-      <option value="Hard">Hard</option>
-    </select>
-  </div>
-  <div class="main">
-    <div class="lost" id="lost">
-      <h3>Time ran out</h3>
-      <p>your final score is <span id="score">15</span></p>
-      <button onclick="reloade()">Reload</button>
+    <!-- font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6d99978cad.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="head_part">
+      <label for="difficulty">Difficulty</label>
+      <select name="difficulty" id="difficulty">
+        <option value="5">Easy</option>
+        <option value="3">Medium</option>
+        <option value="2">Hard</option>
+      </select>
     </div>
-    <div class="toggle_header">
-      <button onclick="toggle_header()">
-        <i class="fa-solid fa-gear"></i>
-      </button>
+    <div class="main">
+      <div class="info_screen">
+        <div class="lost hide" id="lost">
+        <h2>Time ran out</h2>
+        <p>your final score is <span id="final_score">15</span></p>
+        <button onclick="reloade()">Reload</button>
+      </div>
+        <div class="play_ground" id="play_ground">
+          <div class="title">
+            <h3>
+              <i class="fas fa-dove fa-flip-horizontal"></i> 
+              Speed Typer
+              <i class="fas fa-dove"></i>
+            </h3>
+            <div class="time_score">
+              <div class="time" >Time left: <span id="time"></span>s</div>
+              <div class="score" >score: <span id="score"></span></div>
+            </div>
+            <p>Type the following:</p>
+            <div class="word" id="word">drag</div>
+            <div class="player">
+            <input type="text" name="player" id="player" placeholder="Type the word here..." autofocus>
+          </div></div>
+        </div>
+      </div>
+      <div class="toggle_header">
+        <button onclick="toggle_header()">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+      </div>
     </div>
-  </div>
-  <!-- Project -->
-  <script src="script.js"></script>
-</body>
+    <!-- Project -->
+    <script src="script.js"></script>
+  </body>
 </html>
